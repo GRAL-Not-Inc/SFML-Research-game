@@ -240,18 +240,6 @@
     <None Include="include\sfml\system\Utf.inl" />
     <None Include="include\sfml\system\Vector2.inl" />
     <None Include="include\sfml\system\Vector3.inl" />
-    <None Include="sfml-audio-d-2.dll" />
-    <None Include="sfml-graphics-d-2.dll" />
-    <None Include="sfml-network-d-2.dll" />
-    <None Include="sfml-system-d-2.dll" />
-    <None Include="sfml-window-d-2.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <Library Include="lib\sfml-audio-d.lib" />
-    <Library Include="lib\sfml-graphics-d.lib" />
-    <Library Include="lib\sfml-network-d.lib" />
-    <Library Include="lib\sfml-system-d.lib" />
-    <Library Include="lib\sfml-window-d.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
