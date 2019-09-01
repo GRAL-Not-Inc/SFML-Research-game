@@ -1,7 +1,7 @@
 #include <SFML\Window.hpp>
 int main()
 {
-	sf::Window window(sf::VideoMode(800, 600), "GRAL nie umie into programowanie");
+	sf::Window window(sf::VideoMode(900, 800), "GRAL nie umie into programowanie");
 
 	// run the program as long as the window is open
 	while (window.isOpen())
