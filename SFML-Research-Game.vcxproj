@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="KlasaA.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -229,6 +230,7 @@
     <ClInclude Include="include\sfml\window\WindowBase.hpp" />
     <ClInclude Include="include\sfml\window\WindowHandle.hpp" />
     <ClInclude Include="include\sfml\window\WindowStyle.hpp" />
+    <ClInclude Include="KlasaA.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="include\sfml\audio\SoundFileFactory.inl" />
