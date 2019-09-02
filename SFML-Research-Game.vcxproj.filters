@@ -21,9 +21,6 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="KlasaA.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\sfml\Audio.hpp">
@@ -322,9 +319,6 @@
     </ClInclude>
     <ClInclude Include="include\sfml\window\WindowStyle.hpp">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="KlasaA.h">
-      <Filter>Header Files\UtworzoneKlasy</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
