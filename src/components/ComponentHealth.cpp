@@ -1,4 +1,4 @@
-#include "hp.h"
+#include "ComponentHealth.h"
 
 void ComponentHealth::GetHit(float hit)
 {

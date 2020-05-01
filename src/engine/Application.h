@@ -1,6 +1,6 @@
 #pragma once
 #include "SFML/Graphics.hpp"
-#include "Character.h"
+#include "../prefabs/Character.h"
 class Application
 {
 	sf::RenderWindow window;
