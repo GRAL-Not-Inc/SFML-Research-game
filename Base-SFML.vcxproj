@@ -144,12 +144,14 @@ xcopy "$(SolutionDir)assets\*.*" "$(OutDir)assets\" /F /R /Y /I</Command>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\components\ComponentHunger.cpp" />
     <ClCompile Include="src\engine\Application.cpp" />
     <ClCompile Include="src\prefabs\character.cpp" />
     <ClCompile Include="src\components\ComponentStamina.cpp" />
     <ClCompile Include="src\components\ComponentHealth.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\components\ComponentHunger.h" />
     <ClInclude Include="src\engine\Application.h" />
     <ClInclude Include="src\prefabs\character.h" />
     <ClInclude Include="src\components\ComponentStamina.h" />
