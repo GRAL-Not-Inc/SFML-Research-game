@@ -1,6 +1,6 @@
 #pragma once
 #include "SFML/Graphics.hpp"
-#include "../ComponentStamina.h"
+#include "ComponentStamina.h"
 class Character
 {
 private:
