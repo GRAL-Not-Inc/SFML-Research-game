@@ -5,7 +5,7 @@ void Character::change_pos(int pos, float dt)
 	switch (pos)
 	{
 	case 1:
-		//test
+		//test gowno
 		sprite.setTextureRect({ 32,0,32,32 });
 		sprite.move({ 0,1 * dt });
 		break;
