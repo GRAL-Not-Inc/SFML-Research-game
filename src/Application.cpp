@@ -2,12 +2,13 @@
 
 Application::Application(unsigned int window_height_, unsigned int window_width_, float framerate_, bool fullscreen_)
 	:window(sf::VideoMode(window_height_, window_width_),
-		"Grzybki, Gloniki i Bateryjki!",
+		"CHuj",
 		sf::Style::Titlebar | sf::Style::Close | sf::Style::Resize | (fullscreen_ & sf::Style::Fullscreen)),
 	window_height(window_height_),
 	window_width(window_width_),
 	framerate(framerate_),
-	is_running(true)
+	is_running(true),
+	MC("assets/m.png")
 {
 }
 
@@ -53,9 +54,24 @@ void Application::Run()
 
 		// VVV GAME LOGIC HERE VVV
 
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+		{
+			MC.change_pos(1,dt);
+		}
+		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+		{
+			MC.change_pos(2,dt);
+		}
+		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+		{
+			MC.change_pos(3,dt);
+		}
+		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+		{
+			MC.change_pos(4,dt);
+		}
 
-
-
+		window.draw(MC.sprite);
 
 
 
