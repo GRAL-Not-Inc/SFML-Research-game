@@ -145,15 +145,21 @@ xcopy "$(SolutionDir)assets\*.*" "$(OutDir)assets\" /F /R /Y /I</Command>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="src\engine\Application.cpp" />
-    <ClCompile Include="src\prefabs\character.cpp" />
+    <ClCompile Include="src\engine\State.cpp" />
+    <ClCompile Include="src\engine\StateMachine.cpp" />
     <ClCompile Include="src\components\ComponentStamina.cpp" />
     <ClCompile Include="src\components\ComponentHealth.cpp" />
+    <ClCompile Include="src\engine\Vars.cpp" />
+    <ClCompile Include="src\prefabs\Character.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\engine\Application.h" />
-    <ClInclude Include="src\prefabs\character.h" />
+    <ClInclude Include="src\engine\State.h" />
+    <ClInclude Include="src\engine\StateMachine.h" />
     <ClInclude Include="src\components\ComponentStamina.h" />
     <ClInclude Include="src\components\ComponentHealth.h" />
+    <ClInclude Include="src\engine\Vars.h" />
+    <ClInclude Include="src\prefabs\Character.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

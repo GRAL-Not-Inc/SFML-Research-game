@@ -7,12 +7,8 @@ Application::Application(unsigned int window_height_, unsigned int window_width_
 	window_height(window_height_),
 	window_width(window_width_),
 	framerate(framerate_),
-	is_running(true),
-	mc("assets/w.png")
+	is_running(true)
 {
-	bg_tex.loadFromFile("assets/bg.jpg");
-	bg.setTexture(bg_tex);
-	bg.setScale(window.getSize().x /(float) bg_tex.getSize().x, window.getSize().y /(float) bg_tex.getSize().y);
 }
 
 void Application::Run()
@@ -57,25 +53,6 @@ void Application::Run()
 
 		// VVV GAME LOGIC HERE VVV
 
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
-		{
-			mc.ChangePos(1,dt);
-		}
-		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
-		{
-			mc.ChangePos(2,dt);
-		}
-		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
-		{
-			mc.ChangePos(3,dt);
-		}
-		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
-		{
-			mc.ChangePos(4,dt);
-		}
-
-		window.draw(bg);
-		window.draw(mc.sprite);
 
 		// END OF GAME LOGIC
 

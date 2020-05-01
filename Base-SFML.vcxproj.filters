@@ -21,13 +21,22 @@
     <ClCompile Include="src\components\ComponentStamina.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\prefabs\character.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\engine\Application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\components\ComponentHealth.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\StateMachine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\State.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\prefabs\Character.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\Vars.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -35,13 +44,22 @@
     <ClInclude Include="src\components\ComponentStamina.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\prefabs\character.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\engine\Application.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\components\ComponentHealth.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\StateMachine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\State.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\prefabs\Character.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\Vars.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

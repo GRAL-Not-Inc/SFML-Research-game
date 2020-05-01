@@ -15,15 +15,18 @@ void ComponentStamina::SetCurrent(float amount)
 void ComponentStamina::Drain(float amount)
 {
 	current -= amount;
+	_Update();
 }
 
 void ComponentStamina::Regenerate(float amount)
 {
 	current += amount;
+	_Update();
 }
 
 void ComponentStamina::SetMax(float amount)
 {
 	max = amount;
 	if (max < 0) max = 0;
+	_Update();
 }
