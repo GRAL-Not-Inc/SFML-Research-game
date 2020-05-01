@@ -15,6 +15,10 @@ class Application
 
 	Character mc;
 
+	sf::Texture bg_tex;
+
+	sf::Sprite bg;
+
 public:
 	Application(unsigned int window_height = 500, unsigned int window_width = 500, float framerate_ = 60.0f , bool fullscreen_ = false);
 	void Run();
