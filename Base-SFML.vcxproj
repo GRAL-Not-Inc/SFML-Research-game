@@ -143,12 +143,14 @@ xcopy "$(SolutionDir)assets\*.*" "$(OutDir)assets\" /F /R /Y /I</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ComponentStamina.cpp" />
     <ClCompile Include="hp.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="src\Application.cpp" />
     <ClCompile Include="src\character.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ComponentStamina.h" />
     <ClInclude Include="hp.h" />
     <ClInclude Include="src\Application.h" />
     <ClInclude Include="src\character.h" />
