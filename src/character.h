@@ -4,6 +4,8 @@ class Character
 {
 private:
 	sf::Texture texture;
+	int timer = 0, kl = 32;
+	bool pong = false;
 public:
 	sf::Sprite sprite;
 	Character(std::string texture_)
@@ -14,5 +16,6 @@ public:
 	}
 
 	void change_pos(int,float);
+	void anim(float);
 };
 
