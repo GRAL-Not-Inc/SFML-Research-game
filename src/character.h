@@ -13,6 +13,6 @@ public:
 		sprite.setTextureRect({ 32, 0, 32, 32 });
 	}
 
-	void change_pos(int,float);
+	void ChangePos(int,float);
 };
 

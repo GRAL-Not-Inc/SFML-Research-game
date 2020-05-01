@@ -10,6 +10,9 @@ Application::Application(unsigned int window_height_, unsigned int window_width_
 	is_running(true),
 	mc("assets/m.png")
 {
+	bg_tex.loadFromFile("assets/bg.jpg");
+	bg.setTexture(bg_tex);
+	bg.setScale(window.getSize().x /(float) bg_tex.getSize().x, window.getSize().y /(float) bg_tex.getSize().y);
 }
 
 void Application::Run()
@@ -56,28 +59,23 @@ void Application::Run()
 
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
 		{
-			mc.change_pos(1,dt);
+			mc.ChangePos(1,dt);
 		}
 		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
 		{
-			mc.change_pos(2,dt);
+			mc.ChangePos(2,dt);
 		}
 		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
 		{
-			mc.change_pos(3,dt);
+			mc.ChangePos(3,dt);
 		}
 		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
 		{
-			mc.change_pos(4,dt);
+			mc.ChangePos(4,dt);
 		}
 
+		window.draw(bg);
 		window.draw(mc.sprite);
-
-
-
-
-
-
 
 		// END OF GAME LOGIC
 
