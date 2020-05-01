@@ -1,6 +1,6 @@
-#include "character.h"
+#include "Character.h"
 
-void character::change_pos(int pos, float dt)
+void Character::change_pos(int pos, float dt)
 {
 	switch (pos)
 	{

@@ -1,12 +1,12 @@
 #pragma once
 #include "SFML/Graphics.hpp"
-class character
+class Character
 {
 private:
 	sf::Texture texture;
 public:
 	sf::Sprite sprite;
-	character(std::string texture_)
+	Character(std::string texture_)
 	{
 		texture.loadFromFile(texture_);
 		sprite.setTexture(texture);

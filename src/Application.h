@@ -1,6 +1,6 @@
 #pragma once
 #include "SFML/Graphics.hpp"
-#include "character.h"
+#include "Character.h"
 class Application
 {
 	sf::RenderWindow window;
@@ -13,7 +13,7 @@ class Application
 	unsigned int window_width;
 	unsigned int window_height;
 
-	character MC;
+	Character mc;
 
 public:
 	Application(unsigned int window_height = 500, unsigned int window_width = 500, float framerate_ = 60.0f , bool fullscreen_ = false);
