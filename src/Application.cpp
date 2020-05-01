@@ -2,13 +2,13 @@
 
 Application::Application(unsigned int window_height_, unsigned int window_width_, float framerate_, bool fullscreen_)
 	:window(sf::VideoMode(window_height_, window_width_),
-		"CHuj",
+		"Hug",
 		sf::Style::Titlebar | sf::Style::Close | sf::Style::Resize | (fullscreen_ & sf::Style::Fullscreen)),
 	window_height(window_height_),
 	window_width(window_width_),
 	framerate(framerate_),
 	is_running(true),
-	mc("assets/m.png")
+	mc("assets/w.png")
 {
 	bg_tex.loadFromFile("assets/bg.jpg");
 	bg.setTexture(bg_tex);

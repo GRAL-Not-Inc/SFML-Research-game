@@ -1,5 +1,6 @@
 #pragma once
 #include "SFML/Graphics.hpp"
+#include "../ComponentStamina.h"
 class Character
 {
 private:
@@ -7,6 +8,7 @@ private:
 	int timer = 0, kl = 32;
 	bool pong = false;
 public:
+	ComponentStamina stamina;
 	sf::Sprite sprite;
 	Character(std::string texture_)
 	{
