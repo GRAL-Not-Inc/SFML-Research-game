@@ -1,13 +1,16 @@
 #pragma once
+#include "states/StateGame.h"
+
+
 #include "StateMachine.h"
+#include "Vars.h"
 #include "SFML/Graphics.hpp"
-#include "../prefabs/Character.h"
 class Application
 {
 	StateMachine state_machine;
+	Vars vars;
 
 	sf::RenderWindow window;
-	sf::View view;
 	sf::Cursor cursor;
 
 	float framerate;

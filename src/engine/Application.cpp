@@ -9,6 +9,8 @@ Application::Application(unsigned int window_height_, unsigned int window_width_
 	framerate(framerate_),
 	is_running(true)
 {
+	state_machine.AddState<StateGame>(vars, window, eState::game);
+	vars.current_state = eState::game;
 }
 
 void Application::Run()
@@ -43,18 +45,12 @@ void Application::Run()
 			}
 		}
 
-		//
-		// Game state update
-		//
-		window.clear({ 0, 0, 0, 255 });
-		view.setSize(window.getSize().x, window.getSize().y);
-		view.setCenter(window.getSize().x / 2, window.getSize().y / 2);
-		window.setView(view);
+		// State machine logic here
 
-		// VVV GAME LOGIC HERE VVV
+		state_machine.Step(dt, vars.current_state);
+		state_machine.Draw(vars.current_state);
 
-
-		// END OF GAME LOGIC
+		// Displaying
 
 		window.display();
 
