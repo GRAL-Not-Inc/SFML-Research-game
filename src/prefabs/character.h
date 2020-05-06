@@ -5,10 +5,6 @@
 #include "../components/ComponentSpriteAnimation.h"
 class Character
 {
-private:
-	sf::Texture texture;
-	int timer = 0, kl = 32;
-	bool pong = false;
 public:
 	ComponentStamina stamina;
 	ComponentHealth health;
