@@ -9,7 +9,7 @@ enum class eState
 
 struct Assets
 {
-
+	sf::Texture mainCharTex;
 };
 
 struct Vars

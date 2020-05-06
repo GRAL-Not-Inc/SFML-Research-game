@@ -1,50 +1,43 @@
 #include "Character.h"
 
-void Character::anim(float dt)
+void Character::Step(float dt)
 {
-	if (timer >= 200)
+	// This is utterly fucking retarded. (But temporary).
+	animation.SetAnimRow(0);
+	animation.Play();
+	bool isMoving = false;
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
 	{
-		if (kl >= 64)
-		{
-			pong = true;
-		}
-		if (kl <= 0)
-		{
-			pong = false;
-		}
-		if (pong == false)
-		{
-			kl += 32;
-		}
-		if (pong == true)
-		{
-			kl -= 32;
-		}
-		timer = 0;
+		animation.SetAnimRow(1);
+		isMoving = true;
 	}
-	timer += dt;
+		
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+	{
+		animation.SetAnimRow(2);
+		isMoving = true;
+	}
+		
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
+	{
+		animation.SetAnimRow(0);
+		isMoving = true;
+	}
+		
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
+	{
+		animation.SetAnimRow(3);
+		isMoving = true;
+	}
+	if (!isMoving)
+	{
+		animation.Pause();
+		animation.Reset(1);
+	}
+	animation.Step(dt);
 }
 
-void Character::ChangePos(int pos, float dt)
+void Character::Draw(sf::RenderWindow& window)
 {
-	anim(dt);
-	switch (pos)
-	{
-	case 1:
-		sprite.setTextureRect({ kl,0,32,32 });
-		sprite.move({ 0,1 * dt });
-		break;
-	case 2:
-		sprite.setTextureRect({ kl,32,32,32 });
-		sprite.move({ -1*dt,0 });
-		break;
-	case 3:
-		sprite.setTextureRect({ kl,64,32,32 });
-		sprite.move({ 1 * dt,0 });
-		break;
-	case 4:
-		sprite.setTextureRect({ kl,96,32,32 });
-		sprite.move({ 0,-1*dt });
-		break;
-	}
+	window.draw(sprite);
 }

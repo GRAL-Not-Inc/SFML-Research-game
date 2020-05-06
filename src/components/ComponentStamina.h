@@ -7,7 +7,7 @@ public:
 	float current;
 	float max;
 
-	ComponentStamina(float current = 100, float max = 100)
+	ComponentStamina(float max = 100, float current = 100)
 		:current(current),
 		max(max)
 	{

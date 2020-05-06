@@ -1,6 +1,8 @@
 #pragma once
 #include "SFML/Graphics.hpp"
 #include "../components/ComponentStamina.h"
+#include "../components/ComponentHealth.h"
+#include "../components/ComponentSpriteAnimation.h"
 class Character
 {
 private:
@@ -9,15 +11,18 @@ private:
 	bool pong = false;
 public:
 	ComponentStamina stamina;
-	sf::Sprite sprite;
-	Character(std::string texture_)
-	{
-		texture.loadFromFile(texture_);
-		sprite.setTexture(texture);
-		sprite.setTextureRect({ 32, 0, 32, 32 });
-	}
+	ComponentHealth health;
+	ComponentSpriteAnimation animation;
 
-	void ChangePos(int,float);
-	void anim(float);
+	sf::Sprite sprite;
+	Character(sf::Texture& tex):
+		health(100),
+		stamina(100),
+		sprite(tex),
+		animation(sprite, 32, 4, true)
+	{
+	}
+	void Step(float dt);
+	void Draw(sf::RenderWindow& window);
 };
 
